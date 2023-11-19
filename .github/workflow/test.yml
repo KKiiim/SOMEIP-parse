@@ -1,9 +1,7 @@
 name: run-tests
 on:
-  pull_request:
-    branches: gtest-KKiiim
   push:
-    branches: gtest-KKiiim
+    branches: main
 
 jobs:
   gtest_qsort:
@@ -17,4 +15,3 @@ jobs:
       - name: cmake make and run test
         run: 
           mkdir build && cd build && cmake .. && make && cd ../src && ../bin/gtest-parse
-          
