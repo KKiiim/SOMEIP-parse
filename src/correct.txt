@@ -1,0 +1,33 @@
+// message_0
+Service_ID: 17
+Method_ID: 34
+Length: 26
+Client_ID: 1
+Session_ID: 2
+Protocol_Version: 1
+Interface_Version: 17
+Message_Type: 0
+Return_Code: 0
+
+SessionID: 2022156562
+// lengthOfArray10
+uniqueID_0: 2327816375
+version_0: 115
+uniqueID_1: 12522167
+version_1: 55
+
+
+// message_1
+Service_ID: 18
+Method_ID: 35
+Length: 13
+Client_ID: 3
+Session_ID: 4
+Protocol_Version: 1
+Interface_Version: 21
+Message_Type: 0
+Return_Code: 0
+listEntryExecuted_changedEntry_index: 8890624
+listEntryExecuted_changedEntry_type: 171
+
+

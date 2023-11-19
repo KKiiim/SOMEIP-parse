@@ -1,0 +1,20 @@
+name: run-tests
+on:
+  pull_request:
+    branches: gtest-KKiiim
+  push:
+    branches: gtest-KKiiim
+
+jobs:
+  gtest_qsort:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install g++ gtest
+        run: 
+         sudo apt-get update && sudo apt-get install gcc g++ libgtest-dev -y --no-install-recommends
+      
+      - name: cmake make and run test
+        run: 
+          mkdir build && cd build && cmake .. && make && cd ../src && ../bin/gtest-parse
+          
