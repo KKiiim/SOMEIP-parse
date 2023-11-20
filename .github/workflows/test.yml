@@ -21,4 +21,4 @@ jobs:
 
       - name: run test
         run:
-          cd src && ../bin/gtest-parse
+          bin/gtest-parse

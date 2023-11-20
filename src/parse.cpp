@@ -91,14 +91,14 @@ void SOMEIP_parse::writeOutfile() {
 }
 
 TEST(MockFileStorageTest, testClearJob) {
-  string filePath = "./trace.asc";
+  string filePath = "src/trace.asc";
   SOMEIP_parse myParse(filePath);
   myParse.getHeader(0);
   myParse.getHeader(1);
   myParse.writeOutfile();
 
   ifstream file1("answer.txt");
-  ifstream file2("correct.txt");
+  ifstream file2("src/correct.txt");
 
   string content1, content2;
   ASSERT_TRUE(file1.is_open());
