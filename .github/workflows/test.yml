@@ -11,7 +11,14 @@ jobs:
       - name: install g++ gtest
         run: 
          sudo apt-get update && sudo apt-get install gcc g++ libgtest-dev -y --no-install-recommends
-      
-      - name: cmake make and run test
+      - name: format check
+        run:
+          sudo apt install clang-format && find src include -regex ".*\\.\\(cpp\\|hpp\\|c\\|h\\)" | xargs clang-format -style=file --Werror --dry-run -i 
+
+      - name: build
         run: 
-          mkdir build && cd build && cmake .. && make && cd ../src && ../bin/gtest-parse
+          mkdir build && cd build && cmake .. && make
+
+      - name: run test
+        run:
+          cd src && ../bin/gtest-parse
